@@ -7,7 +7,7 @@ type VisibilityToggleProps = {
 
 function VisibilityToggle({visible, children}: VisibilityToggleProps) {
   const status = visible ? true : false;
-  return useMemo(() => (status ? children : <Fragment />), [status]);
+  return useMemo(() => (status ? children : <Fragment />), [status, children]);
 }
 
 export default VisibilityToggle;

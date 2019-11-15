@@ -7,20 +7,29 @@ type BodyProps = {
   children?: any;
   bodyProps?: ScrollViewProps;
   backgroundColor?: string;
+  transparent?: boolean;
 };
 
-function Body({style, children, bodyProps, backgroundColor}: BodyProps) {
+function Body({
+  style,
+  children,
+  bodyProps,
+  backgroundColor,
+  transparent,
+}: BodyProps) {
   const Theme = useActiveTheme();
   const styles = useMemo(
     () =>
       StyleSheet.create({
         bodyStyle: {
           flexGrow: 1,
-          backgroundColor: backgroundColor || Theme.color.light,
+          backgroundColor: transparent
+            ? 'transparent'
+            : backgroundColor || Theme.color.light,
           ...style,
         },
       }),
-    [backgroundColor, Theme, style],
+    [backgroundColor, Theme, style, transparent],
   );
 
   return useMemo(

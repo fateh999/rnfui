@@ -1,11 +1,13 @@
 import {StatusBarStyle} from 'react-native';
 
 type ThemeType = {
+  name: string;
   color: {
     dark: string;
     shadow: string;
     danger: string;
     primary: string;
+    secondary: string;
     warning: string;
     light: string;
     overlay: string;

@@ -42,20 +42,16 @@ function Container({
           flex: 0,
           backgroundColor:
             statusBarBackgroundColor ||
-            Theme.statusbar.backgroundColor ||
-            Theme.color.light,
+            Theme.color.light ||
+            Theme.statusbar.backgroundColor,
         },
         androidContainerStyle: {
           flex: 1,
+          backgroundColor: Theme.color.light,
           ...style,
         },
       }),
-    [
-      style,
-      statusBarBackgroundColor,
-      Theme.statusbar.backgroundColor,
-      Theme.color.light,
-    ],
+    [Theme, style, statusBarBackgroundColor],
   );
 
   return useMemo(
@@ -75,14 +71,10 @@ function Container({
             </View>
           </VisibilityToggle>
           <VisibilityToggle visible={fullScreen ? false : true}>
-            <Fragment>
-              <SafeAreaView style={styles.iOSSafeAreaStyle} />
-              <SafeAreaView
-                style={styles.iOSContainerStyle}
-                {...containerProps}>
-                {children}
-              </SafeAreaView>
-            </Fragment>
+            <SafeAreaView style={styles.iOSSafeAreaStyle} />
+            <SafeAreaView style={styles.iOSContainerStyle} {...containerProps}>
+              {children}
+            </SafeAreaView>
           </VisibilityToggle>
         </VisibilityToggle>
         <VisibilityToggle visible={Platform.OS === 'android'}>
@@ -94,9 +86,8 @@ function Container({
     ),
     [
       statusBarStyle,
-      Theme.statusbar.style,
+      Theme,
       statusBarBackgroundColor,
-      Theme.statusbar.backgroundColor,
       fullScreen,
       styles,
       containerProps,
