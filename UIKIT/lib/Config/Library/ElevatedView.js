@@ -17,7 +17,7 @@ class ElevatedView extends Component {
       return (
         <View
           elevation={elevation}
-          style={[{elevation, backgroundColor: 'white'}, style]}
+          style={[{elevation}, style]}
           {...otherProps}>
           {this.props.children}
         </View>

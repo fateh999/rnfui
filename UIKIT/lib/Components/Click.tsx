@@ -33,7 +33,6 @@ function Click({
   noFeedback,
   iOSFeedback,
   onLongPress,
-  backgroundColor,
   rippleColor,
 }: ClickProps) {
   const Theme = useActiveTheme();
@@ -41,11 +40,10 @@ function Click({
     () =>
       StyleSheet.create({
         contentStyle: {
-          backgroundColor: backgroundColor || Theme.color.primary,
           ...style,
         },
       }),
-    [backgroundColor, Theme, style],
+    [Theme, style],
   );
 
   return useMemo(

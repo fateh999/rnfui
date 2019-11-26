@@ -38,7 +38,7 @@ function Card({
 
   return (
     <ElevatedView
-      elevation={elevation === undefined ? 3 : 0}
+      elevation={elevation !== undefined ? elevation : 0}
       style={styles.elevatedViewStyle}
       {...cardProps}>
       {children}

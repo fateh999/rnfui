@@ -48,25 +48,27 @@ function Center({
   );
 
   return useMemo(() => {
-    <Fragment>
-      <VisibilityToggle visible={centerType === 'vertical'}>
-        <View style={styles.verticalStyles} {...centerProps}>
-          {children}
-        </View>
-      </VisibilityToggle>
+    return (
+      <Fragment>
+        <VisibilityToggle visible={centerType === 'vertical'}>
+          <View style={styles.verticalStyles} {...centerProps}>
+            {children}
+          </View>
+        </VisibilityToggle>
 
-      <VisibilityToggle visible={centerType === 'horizontal'}>
-        <View style={styles.horizontalStyles} {...centerProps}>
-          {children}
-        </View>
-      </VisibilityToggle>
+        <VisibilityToggle visible={centerType === 'horizontal'}>
+          <View style={styles.horizontalStyles} {...centerProps}>
+            {children}
+          </View>
+        </VisibilityToggle>
 
-      <VisibilityToggle visible={centerType === 'allAxis'}>
-        <View style={styles.allAxisStyles} {...centerProps}>
-          {children}
-        </View>
-      </VisibilityToggle>
-    </Fragment>;
+        <VisibilityToggle visible={centerType === 'allAxis'}>
+          <View style={styles.allAxisStyles} {...centerProps}>
+            {children}
+          </View>
+        </VisibilityToggle>
+      </Fragment>
+    );
   }, [centerType, children, centerProps, styles]);
 }
 

@@ -34,7 +34,10 @@ function Body({
 
   return useMemo(
     () => (
-      <ScrollView contentContainerStyle={styles.bodyStyle} {...bodyProps}>
+      <ScrollView
+        contentContainerStyle={styles.bodyStyle}
+        keyboardShouldPersistTaps={'handled'}
+        {...bodyProps}>
         {children}
       </ScrollView>
     ),
