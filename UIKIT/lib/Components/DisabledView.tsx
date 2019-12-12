@@ -12,7 +12,7 @@ function DisabledView({disabled, children, opacity}: DisabledViewProps) {
     () =>
       StyleSheet.create({
         disabledStyle: {
-          opacity: disabled ? 1 : opacity || 0.5,
+          opacity: disabled ? opacity || 0.5 : 1,
         },
       }),
     [disabled, opacity],
