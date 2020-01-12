@@ -13,7 +13,7 @@ function Row({children, style, flex}: RowProps) {
       StyleSheet.create({
         rowStyles: {
           flexDirection: 'row',
-          flex: flex === undefined ? 1 : flex,,
+          flex: flex === undefined ? 1 : flex,
           ...style,
         },
       }),

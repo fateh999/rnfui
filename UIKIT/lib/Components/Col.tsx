@@ -15,7 +15,7 @@ function Col({children, style, flex, left, right, colProps}: ColProps) {
     () =>
       StyleSheet.create({
         rowStyles: {
-          flex: flex === undefined ? 1 : flex,,
+          flex: flex === undefined ? 1 : flex,
           alignItems: left ? 'flex-start' : right ? 'flex-end' : undefined,
           ...style,
         },
