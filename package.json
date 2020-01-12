@@ -44,5 +44,6 @@
   },
   "readme": "README.md",
   "author": "Fateh Farooqui",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/fateh999/react-native-fluid-ui"
 }
