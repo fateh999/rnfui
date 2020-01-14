@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "lib": ["es6"], 
+    "declaration": true,
+    "declarationDir": "./dist",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": false,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "target": "esnext",
+    "jsx": "react-native",
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["./../UIKIT/**/*"],
+  "exclude": [""]
+}
