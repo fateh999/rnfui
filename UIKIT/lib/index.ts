@@ -10,6 +10,7 @@ import Center from './Components/Center';
 import Row from './Components/Row';
 import Col from './Components/Col';
 import DisabledView from './Components/DisabledView';
+import Padding from './Components/Padding';
 import {ThemeProvider} from './Themes/ThemeContext';
 import useActiveTheme from './Themes/useActiveTheme';
 
@@ -27,5 +28,6 @@ export {
   Row,
   Col,
   DisabledView,
+  Padding,
   useActiveTheme,
 };
