@@ -1,6 +1,6 @@
 {
   "name": "rnfui",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -14,9 +14,9 @@
   "main": "compiled/dist/index.js",
   "types": "compiled/dist/index.d.ts",
   "dependencies": {
-    "react": "16.9.0",
-    "react-native": "0.61.2",
-    "ws": "^3.3.1"
+    "react": "*",
+    "react-native": "*",
+    "ws": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
