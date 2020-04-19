@@ -1,6 +1,6 @@
 {
   "name": "rnfui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -13,7 +13,7 @@
   ],
   "main": "compiled/dist/index.js",
   "types": "compiled/dist/index.d.ts",
-  "dependencies": {
+  "peerDependencies": {
     "react": "*",
     "react-native": "*",
     "ws": "*"
