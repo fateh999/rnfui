@@ -15,8 +15,7 @@
   "types": "compiled/dist/index.d.ts",
   "peerDependencies": {
     "react": "*",
-    "react-native": "*",
-    "ws": "*"
+    "react-native": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
